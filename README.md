@@ -4,6 +4,8 @@
 
 A function that loads a Twig template and transforms it to HTML.
 
+> 🏗 This module is based on [Twig.js](https://github.com/twigjs/twig.js). Twig.js is still in development and shouldn't be used in production.
+
 ## Install
 
 ```
