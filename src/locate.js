@@ -23,6 +23,6 @@ module.exports = async function(filePath) {
 	})
 
 	// Convert dataPath path to an absolute path
-	return dataPath==null ? null : path.join(fileDir, dataPath)
+	return dataPath == null ? null : path.join(fileDir, dataPath)
 
 }

@@ -33,15 +33,15 @@ const requireUncached = function(filePath) {
  */
 module.exports = async function(dataPath, opts) {
 
-	const environment = (opts!=null && opts.optimize===true) ? 'prod' : 'dev'
+	const environment = (opts != null && opts.optimize === true) ? 'prod' : 'dev'
 
 	const globalData = (() => {
 
-		const hasData = opts!=null && opts.data!=null
-		if (hasData===false) return {}
+		const hasData = opts != null && opts.data != null
+		if (hasData === false) return {}
 
-		const mustRequire = typeof opts.data==='string'
-		if (mustRequire===true) return requireUncached(path.resolve(opts.data))
+		const mustRequire = typeof opts.data === 'string'
+		if (mustRequire === true) return requireUncached(path.resolve(opts.data))
 
 		return opts.data
 
@@ -49,8 +49,8 @@ module.exports = async function(dataPath, opts) {
 
 	const localData = (() => {
 
-		const hasData = dataPath!=null
-		if (hasData===false) return {}
+		const hasData = dataPath != null
+		if (hasData === false) return {}
 
 		return requireUncached(dataPath)
 

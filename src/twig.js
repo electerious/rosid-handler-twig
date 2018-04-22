@@ -13,7 +13,7 @@ const twig = Twig.twig
  */
 const shyFilter = function(target) {
 
-	if (target==null) return target
+	if (target == null) return target
 
 	target = new String(target.replace(/\|/g, '&shy;'))
 
@@ -37,7 +37,7 @@ const render = function(filePath, data, opts, next) {
 
 	fs.readFile(filePath, 'utf8', (err, str) => {
 
-		if (err!=null) return next(err)
+		if (err != null) return next(err)
 
 		str = opts.prepend + str + opts.append
 
@@ -75,9 +75,9 @@ const render = function(filePath, data, opts, next) {
  */
 module.exports = async function(filePath, data, opts) {
 
-	const prepend = (opts!=null && typeof opts.prepend==='string') ? opts.prepend : ''
-	const append = (opts!=null && typeof opts.append==='string') ? opts.append : ''
-	const src = (opts!=null && typeof opts.src==='string') ? opts.src : process.cwd()
+	const prepend = (opts != null && typeof opts.prepend === 'string') ? opts.prepend : ''
+	const append = (opts != null && typeof opts.append === 'string') ? opts.append : ''
+	const src = (opts != null && typeof opts.src === 'string') ? opts.src : process.cwd()
 
 	return util.promisify(render)(filePath, data, {
 		prepend,
