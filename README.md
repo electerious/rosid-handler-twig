@@ -1,6 +1,6 @@
 # rosid-handler-twig
 
-[![Travis Build Status](https://travis-ci.org/electerious/rosid-handler-twig.svg?branch=master)](https://travis-ci.org/electerious/rosid-handler-twig) [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/qman4a73c1ixphyl?svg=true)](https://ci.appveyor.com/project/electerious/rosid-handler-twig) [![Coverage Status](https://coveralls.io/repos/github/electerious/rosid-handler-twig/badge.svg?branch=master)](https://coveralls.io/github/electerious/rosid-handler-twig?branch=master) [![Dependencies](https://david-dm.org/electerious/rosid-handler-twig.svg)](https://david-dm.org/electerious/rosid-handler-twig#info=dependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/electerious/rosid-handler-twig.svg)](https://greenkeeper.io/)
+[![Travis Build Status](https://travis-ci.org/electerious/rosid-handler-twig.svg?branch=master)](https://travis-ci.org/electerious/rosid-handler-twig) [![Coverage Status](https://coveralls.io/repos/github/electerious/rosid-handler-twig/badge.svg?branch=master)](https://coveralls.io/github/electerious/rosid-handler-twig?branch=master) [![Dependencies](https://david-dm.org/electerious/rosid-handler-twig.svg)](https://david-dm.org/electerious/rosid-handler-twig#info=dependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/electerious/rosid-handler-twig.svg)](https://greenkeeper.io/)
 
 A function that loads a Twig template and transforms it to HTML.
 
