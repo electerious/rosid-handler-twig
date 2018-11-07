@@ -25,7 +25,7 @@ const shyFilter = function(target) {
 }
 
 /**
- * Renders a Twig file with a new enviroment.
+ * Renders a Twig file with a new environment.
  * @param {String} filePath - Path to the Twig file being rendered.
  * @param {Object} data - Twig data used to render the file.
  * @param {Object} opts - Options.
