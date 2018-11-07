@@ -28,8 +28,8 @@
     "test": "nyc node_modules/mocha/bin/_mocha"
   },
   "dependencies": {
+    "continuous-stealthy-require": "^1.0.0",
     "find-up": "^3.0.0",
-    "stealthy-require": "^1.1.1",
     "twig": "^1.11.0"
   },
   "devDependencies": {
