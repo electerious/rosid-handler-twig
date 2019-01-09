@@ -11,10 +11,10 @@ const data = require('./data')
  * @param {?Object} opts - Options.
  * @returns {Promise<String>} HTML.
  */
-module.exports = async function(filePath, opts) {
+module.exports = async function(filePath, opts = {}) {
 
 	if (typeof filePath !== 'string') throw new Error(`'filePath' must be a string`)
-	if (typeof opts !== 'object' && opts != null) throw new Error(`'opts' must be undefined, null or an object`)
+	if (typeof opts !== 'object') throw new Error(`'opts' must be undefined or an object`)
 
 	const dataPath = await locate(filePath)
 	const json = await data(dataPath, opts)
@@ -29,9 +29,9 @@ module.exports = async function(filePath, opts) {
  * @param {?Object} opts - Options.
  * @returns {String} File extension.
  */
-module.exports.in = function(opts) {
+module.exports.in = function(opts = {}) {
 
-	return (opts != null && opts.in != null) ? opts.in : '.twig'
+	return opts.in == null ? '.twig' : opts.in
 
 }
 
@@ -41,9 +41,9 @@ module.exports.in = function(opts) {
  * @param {?Object} opts - Options.
  * @returns {String} File extension.
  */
-module.exports.out = function(opts) {
+module.exports.out = function(opts = {}) {
 
-	return (opts != null && opts.out != null) ? opts.out : '.html'
+	return opts.out == null ? '.html' : opts.out
 
 }
 

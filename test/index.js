@@ -41,7 +41,7 @@ describe('index()', function() {
 
 		}, (err) => {
 
-			assert.strictEqual(err.message, `'opts' must be undefined, null or an object`)
+			assert.strictEqual(err.message, `'opts' must be undefined or an object`)
 
 		})
 
@@ -351,6 +351,30 @@ describe('index()', function() {
 		const result = await index(structure[0].name)
 
 		assert.strictEqual(result, data.key)
+
+	})
+
+	it('should load Twig and transform it to HTML without custom data when disabling localOverwrites', async function() {
+
+		const data = { key: 'value' }
+		const fileName = uuid()
+
+		const structure = await fsify([
+			{
+				type: fsify.FILE,
+				name: `${ fileName }.twig`,
+				contents: '{{ key }}'
+			},
+			{
+				type: fsify.FILE,
+				name: `${ fileName }.data.json`,
+				contents: JSON.stringify(data)
+			}
+		])
+
+		const result = await index(structure[0].name, { localOverwrites: false })
+
+		assert.strictEqual(result, '')
 
 	})
 

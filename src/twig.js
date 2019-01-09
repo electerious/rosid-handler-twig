@@ -68,16 +68,16 @@ const render = function(filePath, data, opts, next) {
 /**
  * Transforms Twig to HTML.
  * @public
- * @param {?String} filePath - Path to the Twig file being rendered.
- * @param {?Object} data - Twig data used to render the file.
- * @param {?Object} opts - Options.
+ * @param {String} filePath - Path to the Twig file being rendered.
+ * @param {Object} data - Twig data used to render the file.
+ * @param {Object} opts - Options.
  * @returns {Promise<String>} HTML.
  */
 module.exports = async function(filePath, data, opts) {
 
-	const prepend = (opts != null && typeof opts.prepend === 'string') ? opts.prepend : ''
-	const append = (opts != null && typeof opts.append === 'string') ? opts.append : ''
-	const src = (opts != null && typeof opts.src === 'string') ? opts.src : process.cwd()
+	const prepend = typeof opts.prepend === 'string' ? opts.prepend : ''
+	const append = typeof opts.append === 'string' ? opts.append : ''
+	const src = typeof opts.src === 'string' ? opts.src : process.cwd()
 
 	return util.promisify(render)(filePath, data, {
 		prepend,

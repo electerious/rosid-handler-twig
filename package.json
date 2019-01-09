@@ -30,6 +30,7 @@
   "dependencies": {
     "continuous-stealthy-require": "^1.0.0",
     "find-up": "^3.0.0",
+    "require-data": "^1.0.0",
     "twig": "^1.11.0"
   },
   "devDependencies": {
